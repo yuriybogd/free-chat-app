@@ -2,6 +2,11 @@
   "name": "free-chat-client",
   "version": "0.1.0",
   "private": true,
+  "root": "build/",
+  "clean_urls": false,
+  "routes": {
+    "/**": "index.html"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
