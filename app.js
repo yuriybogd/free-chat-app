@@ -1,4 +1,5 @@
 const express = require("express")
+const path = require('path')
 
 const app = express()
 
@@ -8,6 +9,9 @@ app.use(express.urlencoded({extended: true}))
 //Setup Cross Origin
 const cors = require("cors")
 app.use(cors())
+
+//Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 //Bring in the routes
 app.use("/user", require("./routes/user"))

@@ -4,7 +4,8 @@
   "description": "free chat server",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "Yury Bogdanov",
@@ -17,6 +18,7 @@
     "jwt-then": "^1.0.1",
     "mongoose": "^5.11.15",
     "multer": "^1.4.2",
+    "path": "^0.12.7",
     "socket.io": "^3.1.1"
   },
   "devDependencies": {}
