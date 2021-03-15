@@ -75,7 +75,7 @@ const LoginPage = (props) => {
     const email = emailRef.current.value
     const password = passwordRef.current.value
     try {
-      const response = await axios.post("http://localhost:8000/user/login", {
+      const response = await axios.post("/user/login", {
         email,
         password,
       })

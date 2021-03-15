@@ -102,7 +102,7 @@ const RegisterSteps = (props) => {
     console.log("LocalStorage Form State: ", JSON.parse(localStorage.formState))
 
     try {
-      const response = await axios.post("http://localhost:8000/user/register", {
+      const response = await axios.post("/user/register", {
             name, email, password, about, city
           }
       )

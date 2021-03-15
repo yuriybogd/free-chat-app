@@ -65,7 +65,7 @@ const DashboardPage = () => {
   const getChatrooms = async () => {
 
     try {
-      const response = await axios.get("https://http://localhost:8000/chatroom", {
+      const response = await axios.get("/chatroom", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("CC_Token"),
         },
